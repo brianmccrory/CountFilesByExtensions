@@ -32,7 +32,7 @@ public class CountFiles {
  			while (scanner.hasNextLine()) {
  				String line = scanner.nextLine();
  				line.trim();
- 				if (! line.isEmpty())
+ 				if (!line.isEmpty() && !line.startsWith("#"))
  						paths.add(Paths.get(line));
  			}
  		} catch (IOException e) {
